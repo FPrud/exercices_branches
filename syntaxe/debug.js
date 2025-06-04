@@ -1,16 +1,16 @@
 // Nous souhaitons faire la somme du prix de plusieurs articles
 // Prix de deux articles
-let a1 = 10;
-let a2 = 20;
+let article1 = 10;
+let article2 = 20;
 
 // Nous calculons le total
-let totalPrice = a1 + a2;
+let totalPrice = article1 + article2;
 
 // Prix d'un troisieme article
-let a3 = 50;
+let article3 = 50;
 
 // Nous ajoutons a3 au total
-totalPrice += a3;
+totalPrice += article3;
 
 //Nous appliquons 20% de reduction
 let reduction = totalPrice * 0.2;
