@@ -27,13 +27,11 @@ function printEmotionFromHour(moment){
     else if(moment === "soir"){
         return "ZzzzZZZzzz";
     }
-    else {
+    else if(moment === "wrong")
         return "mauvaise option";
-    };
 };
 
 function getEmotionFromHour(hour){
-    // const moment = getMomentFromHour(hour);
     return printEmotionFromHour(getMomentFromHour(hour));
 };
 
