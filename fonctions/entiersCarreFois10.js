@@ -14,4 +14,3 @@ const multiplier10=(variableCarre)=>{
 console.log(multiplier10(variableCarre));
 
 // exercice 3
-// je n'ai pas compris l'énoncé
