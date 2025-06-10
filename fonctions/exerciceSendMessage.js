@@ -9,4 +9,4 @@ sendMessage("Super on se voit mardi !", "Linda", "Marc"); //changement des croch
 let contactName = "Jean";
 let myName = "Ada";
 let myMessage = "Je t'apprends à coder tes premières fonctions";
-sendMessage(myMessage, myName, contactName);
+sendMessage(myMessage, myName, contactName); //modification des paramètres pour correspondre aux variables déclarées précédemment
