@@ -1,4 +1,4 @@
-function parfumParPrenom(prenom){
+function parfumParPrenom(prenom) {
     // annoncer les deux tableaux
     const prenoms = ["Salem", "Vincent", "Abdel", "Meyko", "Mattéo"];
     const parfums = ["caramel", "chocolat", "pistache", "cassis", "vanille"];

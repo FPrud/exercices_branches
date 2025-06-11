@@ -7,7 +7,7 @@ const aleatoire = (min, max) => {
 const createPrice = (articlesCount) => {
     //compte le nombre d'articles
     let tableau = [];
-    for(let i=0; i<articlesCount; i++){
+    for (let i = 0; i < articlesCount; i++) {
         tableau.push(aleatoire(1, 11));
     };
     return tableau;
