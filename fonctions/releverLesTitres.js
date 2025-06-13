@@ -580,3 +580,6 @@ console.log(resultArray);*/
 for (let i = 0; i < data.products.length; i++) {
   console.log(`Titre : ${data.products[i].title}\nDescription : ${data.products[i].description}\n____________________\n`)
 }
+
+//chercher les produits dont la note est supperieure à 3
+//quel pourcentage des produits est rating>3 ?
