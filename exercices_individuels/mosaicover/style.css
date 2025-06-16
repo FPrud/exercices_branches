@@ -4,8 +4,11 @@ body {
 
 img {
     width: 30vw;
+    height: 30vw;
     border: 0px;
     padding: 0px;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .image_2, .image_3 {
