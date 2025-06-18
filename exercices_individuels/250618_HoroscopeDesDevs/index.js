@@ -23,16 +23,10 @@ const horoscopeHTML = document.querySelector("#horoscope")
 const article = document.createElement("article")
 
 for (const item of horoscope) {
-	// TODO: remplace le console.log par le code qui ajoute un article
-	// pour chaque item avec le format suivant :
-	// <article>
-	//   <h2>Sign</h2>
-	//   <p>Description</p>
-	// </article>
   const title = document.createElement("h2");
   const description = document.createElement("p");
-  title.textContent=item.sign;
-  description.textContent=item.description;
+  title.innerText=item.sign;
+  description.innerText=item.description;
   article.appendChild(title);
   article.appendChild(description);
 }
