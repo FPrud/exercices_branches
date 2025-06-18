@@ -4,7 +4,6 @@ const subButton = document.querySelector("#subButton");
 const resetButton = document.querySelector("#resetButton");
 const counter = document.querySelector("#counter");
 
-
 let total = 0;
 
 addButton.addEventListener("click", () => {

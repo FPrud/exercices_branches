@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    padding: 50px;
+}
+
+#hidingText {
+    display: block;
+    font-size: xx-large;
+    }

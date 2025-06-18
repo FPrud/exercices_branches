@@ -1,0 +1,1 @@
+document.querySelector("h1").innerText = "Voici le titre modifié depuis Index.js"
