@@ -1,40 +1,33 @@
+const chosingANumber = () => {
+    player1Number = Number(prompt(`Joueur 1 : Choisissez un nombre`));
+};
 
-// étape 1
+let player1Number;
+
 const askNumber = () => {
-    const userNumber = prompt(`Entrer un nombre`);
-    return Number(userNumber);
+    return Number(prompt(`Joueur 2 : Tentez de deviner le nombre`));
 };
 
-/*// étape 2
-const didIWin = () => {
-    const givenNumber = askNumber();
-    if (givenNumber < 22) {
-        return (`Plus grand`);
-    } else if (givenNumber > 22) {
-        return (`Plus petit`);
-    };
-    return (`Bravo ! Vous avez deviné le nombre`);
-};
-alert(didIWin());
-*/
-
-//étape 3
-const didIWin = () => {
-    const givenNumber = askNumber();
-    if (givenNumber === 22) {
+const didIWin = (givenNumber) => {
+    if (givenNumber === player1Number) {
+        alert("Bravo ! Vous avez deviné le nombre");
         return true;
-    };
-    return false;
-};
-
-const gamePlay = () => {
-    const givenNumber = askNumber();
-    const trueOrFalse = didIWin();
-    for (const round of didIWin()) {
-
+    } else if (givenNumber < player1Number) {
+        alert("Plus grand");
+        return false;
+    } else if (givenNumber > player1Number) {
+        alert("Plus petit");
+        return false;
     }
 };
 
-alert(gamePlay());
+const gamePlay = () => {
+    chosingANumber();
+    let hasWon = false;
+    while (!hasWon) {
+        const number = askNumber();
+        hasWon = didIWin(number);
+    }
+};
 
-// par pitié n'éfface pas ça si tu es frustré
+gamePlay();
