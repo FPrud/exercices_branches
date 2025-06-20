@@ -31,3 +31,5 @@ const gamePlay = () => {
 };
 
 gamePlay();
+
+// Les étapes 5 et 6 ne sont pas dans mes capacités aujourd'hui.
