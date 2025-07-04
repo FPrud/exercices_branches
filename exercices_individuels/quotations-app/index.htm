@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citations</title>
+    <title>Mes citations</title>
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+    <h1>Mes citations</h1>
+    <h2>Gestionaire de citations en ligne</h2>
+    <h3 id="citationCounter">0 citations</h3>
+    <hr>
+    <form>
+        Citation : <input id="formCitation">
+        Author : <input id="formAuthor">
+        <button id="submit">Soumettre</button>
+    </form>
+    <hr>
+    <div id="quoteList">
+        <div class="quote">
+            <p class="text">On ne naît pas femme, on le devient.</p>
+            <p class="author">Simone de Beauvoir</p>
+            <hr>
+        </div>
+    </div>
 </body>
+
 </html>
