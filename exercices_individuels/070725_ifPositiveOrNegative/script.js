@@ -1,4 +1,4 @@
-const isPositiveorNegative = (testedNumber) => {
+const isPositiveOrNegative = (testedNumber) => {
     if (testedNumber > 0) {
         return true;
     } else if (testedNumber < 0) {
@@ -7,6 +7,6 @@ const isPositiveorNegative = (testedNumber) => {
     return null;
 }
 
-console.log(isPositiveorNegative(6));
-console.log(isPositiveorNegative(-8));
-console.log(isPositiveorNegative(0));
+console.log(isPositiveOrNegative(6));
+console.log(isPositiveOrNegative(-8));
+console.log(isPositiveOrNegative(0));
