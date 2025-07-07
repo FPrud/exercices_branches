@@ -34,7 +34,7 @@ horoscopeHTML.appendChild(article); // on "colle / push / accroche" article dans
 }
 
 
-/* //alternative propre avec .innerHTML
+//alternative propre avec .innerHTML
 const horoscopeHTML = document.querySelector("#horoscope")
 for(const item of horoscope) {
   horoscopeHTML.innerHTML +=`
@@ -44,7 +44,7 @@ for(const item of horoscope) {
     </article>
   `;
 };
-*/
+
 
 /* //alternative avec forEach
 const horoscopeHTML = document.querySelector("#horoscope")

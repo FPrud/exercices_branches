@@ -10,6 +10,7 @@ addButton.addEventListener("click", () => {
     counter.innerText = total += 1;
     // équivalent à document.querySelector("#counter").innerText = total += 1;
 });
+console.log(total)
 subButton.addEventListener("click", () => {
     counter.innerText = total -= 1;
 });
@@ -17,4 +18,4 @@ resetButton.addEventListener("click", () => {
     counter.innerText = total = 0;
 });
 
-//merci Xinshu
+//merci Xinzhu
