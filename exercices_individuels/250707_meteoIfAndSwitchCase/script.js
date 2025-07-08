@@ -13,7 +13,6 @@ if (tmp < 0) {
     console.log("Its Hot.");
 } else console.log("Its very hot.");
 
-
 console.log("Switch case method : ")
 switch (true) {
     case tmp < 0:

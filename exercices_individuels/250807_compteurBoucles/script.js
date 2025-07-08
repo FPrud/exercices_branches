@@ -7,25 +7,25 @@
 //boucle for
 for (i = 0; i < 100; i++) {
     console.log(i);
-}
+};
 
 //boucle while
 let j = 0;
 while (j < 99) {
     j++;
     console.log(j);
-}
+};
 
 //la boucle la plus pertinente dans ce contexte me semble être la boucle for car elle est utilisable sans avoir de variable à déclarer au préalable.
 
 //compteur de 50 à 99
 for (k = 50; k < 100; k++) {
     console.log(k);
-}
+};
 
 //compteur de 49 à 1 (méthode while)
 let l = 50;
 while (l > 1) {
     l--;
     console.log(l);
-}
+};
