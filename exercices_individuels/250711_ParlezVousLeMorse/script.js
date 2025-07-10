@@ -21,21 +21,37 @@ const translateLatinCharacter = (character) => {
 // Étape 3
 
 const encode = (text) => {
-    let codeMessage = ""
+    let morseMessage = ""
     for (const letter of getLatinCharacterList(text)) {
-        codeMessage += translateLatinCharacter(letter);
+        morseMessage += translateLatinCharacter(letter);
     }
-    return codeMessage;
+    return morseMessage;
 };
 
-console.log(encode("ca marche CA MARCHE"));
+// console.log(encode("ca marche CA MARCHE"));
 
 // Étape 4
-// Vous trouverez en annexe 2 le dictionnaire de correspondance inversé. Ajoutez-le à votre code, et appliquez les procédés similaire à ce qui a été fait pour le encode pour créer une fonction decode. Dans cet exercice, on admettra que les lettres en morse sont séparées par un espace, et les mots par des “/” (slash).
 
-// Ainsi, créer la fonction getMorseCharacterList ainsi que translateMorseCharacter.
+const getMorseCharacterList = (morse) => {
+    return morse.split(" ");
+};
 
+import { morseToLatin } from './morseToLatin.js';
 
+const translateMorseCharacter = (character) => {
+    return morseToLatin[character];
+};
+
+const decode = (morse) => {
+    let textMessage = "";
+    for (const symbol of getMorseCharacterList(morse)) {
+        textMessage += translateMorseCharacter(symbol);
+    }
+    return textMessage;
+};
+
+console.log(decode("-.-. .- / -- .- .-. -.-. .... . / -.-. .- / -- .- .-. -.-. .... ."))
+console.log(encode("coucou ca marche"))
 
 // Étape 5
 // Pour finir cet exercice, utilisez des champs de saisie input en HTML et des boutons pour traduire du texte et du morse dans un sens ou dans l’autre.

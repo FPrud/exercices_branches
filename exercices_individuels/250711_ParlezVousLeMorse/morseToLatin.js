@@ -1,4 +1,4 @@
-const morseToLatin = {
+export const morseToLatin = {
   '-': "T",
   '--': "M",
   '---': "O",
@@ -24,5 +24,6 @@ const morseToLatin = {
   '..-.': "F",
   '...': "S",
   '...-': "V",
-  '....': "H"
+  '....': "H",
+  '/':' '
 }
