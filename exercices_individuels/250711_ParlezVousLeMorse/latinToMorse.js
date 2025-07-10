@@ -1,4 +1,4 @@
-const latinToMorse = {
+export const latinToMorse = {
 	'A':'.-',
 	'B':'-...',
 	'C':'-.-.',
@@ -24,5 +24,6 @@ const latinToMorse = {
 	'W':'.--',
 	'X':'-..-',
 	'Y':'-.--',
-	'Z':'--..'
-}
+	'Z':'--..',
+	' ':'/'
+};
