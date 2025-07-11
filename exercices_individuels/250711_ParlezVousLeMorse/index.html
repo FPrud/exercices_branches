@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parlez vous le morse ?</title>
-    <script defer src="script.js"></script>
+    <script defer type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <form class="encodeDecodeForm">
+        <div>
+        </div>
+        <div>
+            <label for="name">Entrez votre message : </label>
+            <input type="text" name="input" id="input" required />
+            <select name="modeSelector" id="modeSelector">
+                <option value="">-- Selectionnez un mode --</option>
+                <option value="encode">Texte vers morse</option>
+                <option value="decode">Morse vers texte</option>
+            </select>
+            <input type="submit" value="Traduire" id="submitButton" disabled>
+        </div>
+    </form>
+    <hr>
+    <div id="showResult">
+    </div>
 </body>
+
 </html>

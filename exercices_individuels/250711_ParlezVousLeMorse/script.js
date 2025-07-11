@@ -4,7 +4,7 @@ const getLatinCharacterList = (text) => {
     return text.toUpperCase().split("");
 };
 
-let message = "Hello World";
+// let message = "Hello World";
 
 // console.log(getLatinCharacterList(message));
 
@@ -21,7 +21,7 @@ const translateLatinCharacter = (character) => {
 // Étape 3
 
 const encode = (text) => {
-    let morseMessage = ""
+    let morseMessage = "";
     for (const letter of getLatinCharacterList(text)) {
         morseMessage += translateLatinCharacter(letter);
     }
@@ -44,14 +44,35 @@ const translateMorseCharacter = (character) => {
 
 const decode = (morse) => {
     let textMessage = "";
-    for (const symbol of getMorseCharacterList(morse)) {
-        textMessage += translateMorseCharacter(symbol);
+    for (const morseLetter of getMorseCharacterList(morse)) {
+        textMessage += translateMorseCharacter(morseLetter);
     }
     return textMessage;
 };
 
-console.log(decode("-.-. .- / -- .- .-. -.-. .... . / -.-. .- / -- .- .-. -.-. .... ."))
-console.log(encode("coucou ca marche"))
+// console.log(decode("-.-. .- / -- .- .-. -.-. .... . / -.-. .- / -- .- .-. -.-. .... ."));
 
 // Étape 5
-// Pour finir cet exercice, utilisez des champs de saisie input en HTML et des boutons pour traduire du texte et du morse dans un sens ou dans l’autre.
+const input = document.querySelector("#input");
+const modeSelector = document.querySelector("#modeSelector");
+const submitButton = document.querySelector("#submitButton");
+const showResult = document.querySelector("#showResult");
+
+submitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (modeSelector.value === "encode") {
+        showResult.innerText = encode(input.value);
+        input.value = "";
+    } else if (modeSelector.value === "decode") {
+        showResult.innerText = decode(input.value);
+        input.value = "";
+    };
+});
+
+modeSelector.addEventListener("change", () => {
+    if (modeSelector.value === "encode" || modeSelector.value === "decode") {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    };
+});
