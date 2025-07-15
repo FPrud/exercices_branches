@@ -21,23 +21,21 @@ const horoscope = [
 
 const horoscopeHTML = document.querySelector("#horoscope")
 
-
 for (const item of horoscope) { // parcours les elements de horoscope, autant de fois qu'il y a de cell dans le tableau
-const article = document.createElement("article") // créer la balise <article>
+  const article = document.createElement("article") // créer la balise <article>
   const title = document.createElement("h2");// créer une boite vide <h2>
   const description = document.createElement("p");// créer une boite vide <p>
   title.innerText = item.sign;// j'associe item.sign à "title"
   description.innerText = item.description;// j'associe item.description à "description"
   article.appendChild(title); // on "colle / push / accroche" title dans article
   article.appendChild(description); // on "colle / push / accroche"  description dans article
-horoscopeHTML.appendChild(article); // on "colle / push / accroche" article dans horoscopeHTML
+  horoscopeHTML.appendChild(article); // on "colle / push / accroche" article dans horoscopeHTML
 }
 
 
 //alternative propre avec .innerHTML
-const horoscopeHTML = document.querySelector("#horoscope")
-for(const item of horoscope) {
-  horoscopeHTML.innerHTML +=`
+for (const item of horoscope) {
+  horoscopeHTML.innerHTML += `
     <article>
       <h2>${item.sign}</h2>
       <p>${item.description}</p>
@@ -47,7 +45,6 @@ for(const item of horoscope) {
 
 
 /* //alternative avec forEach
-const horoscopeHTML = document.querySelector("#horoscope")
 horoscope.forEach((item)=>{
   horoscopeHTML.innerHTML +=`
     <article>
