@@ -59,20 +59,20 @@ const submitButton = document.querySelector("#submitButton");
 const showResult = document.querySelector("#showResult");
 
 submitButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (modeSelector.value === "encode") {
-        showResult.innerText = encode(input.value);
-        input.value = "";
-    } else if (modeSelector.value === "decode") {
-        showResult.innerText = decode(input.value);
-        input.value = "";
-    };
+event.preventDefault();
+if (modeSelector.value === "encode") {
+showResult.innerText = encode(input.value);
+input.value = "";
+} else if (modeSelector.value === "decode") {
+showResult.innerText = decode(input.value);
+input.value = "";
+};
 });
 
 modeSelector.addEventListener("change", () => {
-    if (modeSelector.value === "encode" || modeSelector.value === "decode") {
-        submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
-    };
+if (modeSelector.value === "encode" || modeSelector.value === "decode") {
+submitButton.disabled = false;
+} else {
+submitButton.disabled = true;
+};
 });
