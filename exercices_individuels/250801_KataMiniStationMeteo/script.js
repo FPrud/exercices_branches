@@ -43,7 +43,7 @@ async function getCoordinates(userCity) {
 
         if (!responseCoord.ok) {
             throw new Error(`Erreur lors de la récupération des données de coordonnées : ${responseCoord.statusText}`);
-        }
+        };
 
         const dataCoord = await responseCoord.json();
 
@@ -58,12 +58,12 @@ async function getCoordinates(userCity) {
         } else {
             console.log("Aucun résultat trouvé pour", userCity);
             return null;
-        }
+        };
     } catch (error) {
         console.error("Erreur dans getCoordinates:", error.message);
         return null;
-    }
-}
+    };
+};
 
 async function getWeather(lat, lon) {
     console.log("Requête météo pour lat:", lat, "lon:", lon);
@@ -72,7 +72,7 @@ async function getWeather(lat, lon) {
 
         if (!responseWeather.ok) {
             throw new Error(`Erreur lors de la récupération des données météo : ${responseWeather.statusText}`);
-        }
+        };
 
         const dataWeather = await responseWeather.json();
         console.log("Données météo brutes :", dataWeather);
@@ -82,7 +82,7 @@ async function getWeather(lat, lon) {
         } else {
             console.log("Données de température non trouvées dans la réponse météo.");
             return null;
-        }
+        };
     } catch (error) {
         console.error("Erreur dans getWeather:", error.message);
         return null;
