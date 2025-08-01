@@ -9,7 +9,7 @@ HTMLsendButton.addEventListener("click", async (event) => {
     event.preventDefault();
     const userCityInput = HTMLcityInput.value.trim();
     console.log("L'utilisateur a recherché :", userCityInput);
-
+    HTMLcityInput.value = "";
     const cityData = await getCoordinates(userCityInput);
 
     if (cityData) {
