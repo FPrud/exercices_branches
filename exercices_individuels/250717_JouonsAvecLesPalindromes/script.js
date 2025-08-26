@@ -15,7 +15,7 @@ function maxDaysInMonth(month, year) {
         return 28;
     }
     return 0;
-}
+};
 
 function isValidDate(dateString) {
     if (dateString.length !== 10) {
@@ -47,48 +47,47 @@ function isValidDate(dateString) {
     }
 
     return true;
-}
+};
 
 // ____________________Étape 2____________________
 
 function isPalindrome(dateString) {
-  if (!isValidDate(dateString)) {
-    return false;
-  }
-  const cleanedDate = dateString.replace(/\//g, "");
+    if (!isValidDate(dateString)) {
+        return false;
+    }
+    const cleanedDate = dateString.replace(/\//g, "");
 
-  const reversedCleanedDate = cleanedDate.split('').reverse().join('');
+    const reversedCleanedDate = cleanedDate.split('').reverse().join('');
 
-  return cleanedDate === reversedCleanedDate;
-}
+    return cleanedDate === reversedCleanedDate;
+};
 
 // ____________________Étape 3____________________
 
 function getNextPalindromes(x) {
-  const palindromesFound = [];
-  let currentDate = new Date();
+    const palindromesFound = [];
+    let currentDate = new Date();
 
-  while (palindromesFound.length < x) {
+    while (palindromesFound.length < x) {
 
-    const day = String(currentDate.getDate()).padStart(2, '0');
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    const year = String(currentDate.getFullYear());
+        const day = String(currentDate.getDate()).padStart(2, '0');
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+        const year = String(currentDate.getFullYear());
 
-    const dateString = `${day}/${month}/${year}`;
+        const dateString = `${day}/${month}/${year}`;
 
-    if (isPalindrome(dateString)) {
-      palindromesFound.push(dateString);
+        if (isPalindrome(dateString)) {
+            palindromesFound.push(dateString);
+        }
+
+        currentDate.setDate(currentDate.getDate() + 1);
     }
 
-    currentDate.setDate(currentDate.getDate() + 1);
-  }
-
-  return palindromesFound;
-}
+    return palindromesFound;
+};
 
 console.log(getNextPalindromes(8));
 
 // ____________________Étape 4____________________
 
-// Étape 4
 // Refactorer la fonction isPalindrome pour faire en sorte qu’elle renvoie si, ou non, une chaine de caractère est un palindrome. Créer ensuite une nouvelle fonction isDatePalindrome qui reprendra les spécificités du palindrome au format date (comme s’assurer que la date est valide) et qui appellera isPalindrome.

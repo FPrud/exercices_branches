@@ -36,9 +36,9 @@ function addQuote(quote, author) {
     updateCounter();
 };
 
-// Validation du formulaire
-submit.addEventListener("click", (event) => {
-    event.preventDefault();
+/ddEventListener("click", (event) => {
+    event.preventDefault();/ Validation du formulaire
+submit.a
     addQuote(formQuote.value, formAuthor.value);
     quotes.push({ text: formQuote.value, author: formAuthor.value });
 });
