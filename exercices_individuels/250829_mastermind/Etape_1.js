@@ -32,23 +32,29 @@ const verifyCombination = (testedCombination) => {
 // console.log("Mauvaise combinaison :", verifyCombination(["green", "red"]));
 // console.log("Bonne combinaison :", verifyCombination(["yellow", "green"]));
 
-const game = (testedCombination, remainingAttempts) => {
-    if (remainingAttempts > 0) {
-        if (validColors(testedCombination)) {
-            if (validLength(testedCombination)) {
-                if (verifyCombination(testedCombination)) {
-                    return "Bravo, vous avez trouvé la bonne combinaison."
+const game = (testedCombination) => {
+    let remainingAttempts = [12,11,10,9,8,7,6,5,4,3,2,1,0];
+    for (let attempt of remainingAttempts) {
+        if (attempt > 0) {
+            if (validColors(testedCombination)) {
+                if (validLength(testedCombination)) {
+                    if (verifyCombination(testedCombination)) {
+                        return `Essai ${12-attempt} : Bravo, vous avez trouvé la bonne combinaison.`
+                    };
+                    remainingAttempts --;
+                    return `Essai ${12-attempt} : pas de chance. Veuillez rééssayer.`
                 };
-                return "Pas de chance. Veuillez rééssayer."
+                remainingAttempts --;
+                return `Essai ${12-attempt} : saisie invalide. Votre code n'a pas le bon nombre de couleurs. Veuillez proposer deux couleurs parmis blue, green, red ou yellow. Veuillez rééssayer.`
             };
-            return "Saisie invalide : votre code n'a pas le bon nombre de couleurs. Veuillez proposer deux couleurs parmis blue, green, red ou yellow."
+            remainingAttempts --;
+            return `Essai ${12-attempt} : saisie invalide. Une ou des couleurs ne sont pas dans le jeu. Veuillez proposer deux couleurs parmis blue, green, red ou yellow. Veuillez rééssayer.`
         };
-        return "Saisie invalide : une ou des couleurs ne sont pas dans le jeu. Veuillez proposer deux couleurs parmis blue, green, red ou yellow.";
+        return `Essai ${12-attempt} : fin de la partie.`;
     };
-    return "Fin de la partie.";
 };
 
-console.log(game(["green", "violet"], 12));
-console.log(game(["green", "blue", "yellow"], 11));
-console.log(game(["green", "red"], 10));
-console.log(game(["yellow", "green"], 9))
+console.log(game(["green", "violet"]));
+console.log(game(["green", "blue", "yellow"]));
+console.log(game(["green", "red"]));
+console.log(game(["yellow", "green"]));
