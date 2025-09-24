@@ -1,0 +1,70 @@
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 40%)), url("burger_background.png");
+    background-size: 500px;
+    margin: 0;
+    padding: 2em;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-style: none;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+#switchModeButton {
+    background-color: transparent;
+    color: black;
+    border-style: none;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+#main {
+    width: 80%;
+    max-width: 25em;
+    background-color: #fff8dc;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+input[type=text] {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.menuItem {
+    background-color: aliceblue;
+    margin: auto;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.image {
+    font-size: 5em;
+    margin: -1rem 0rem;
+}
