@@ -9,7 +9,8 @@ body {
     flex-direction: column;
     text-align: center;
     background-image: linear-gradient(rgba(255, 255, 255, 40%)), url("burger_background.png");
-    background-size: 500px;
+    background-size: 250px;
+    background-position: center;
     margin: 0;
     padding: 2em;
 }
@@ -35,6 +36,7 @@ a:visited {
     padding: 1em;
     margin: 1em;
     border-radius: 20px;
+    box-shadow: 0px 0px 2px black;
 }
 
 #main {
@@ -45,6 +47,7 @@ a:visited {
     padding: 1em;
     text-align: center;
     border-radius: 20px;
+    box-shadow: 0px 0px 2px black;
 }
 
 input[type=text] {
@@ -62,6 +65,7 @@ input[type=text] {
     margin: 1em;
     text-align: center;
     border-radius: 20px;
+    box-shadow: 0px 0px 2px black;
 }
 
 .image {
